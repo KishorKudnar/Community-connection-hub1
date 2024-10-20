@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Event Registration</h1>
+        
+        <!-- Buttons to open the modal for different events -->
+        <div class="event-buttons">
+            <button onclick="registerEvent('Community Fair')">Register for Community Fair</button>
+            <button onclick="registerEvent('Job Training Workshop')">Register for Job Training Workshop</button>
+            <button onclick="registerEvent('Volunteer Drive')">Register for Volunteer Drive</button>
+            <button onclick="registerEvent('Holiday Parade')">Holiday Parade</button>
+            <button onclick="registerEvent('Technology Expo')">Technology Expo</button>
+            <button onclick="registerEvent('Community Cleanup')">Community Cleanup</button>
+            <button onclick="registerEvent('Art and Music Festival')">Art and Music Festival</button>
+            <button onclick="registerEvent('Health and Wellness Expo')">Health and Wellness Expo</button>
+            <button onclick="registerEvent('Science and Technology Fair')">Science and Technology Fair</button>
+        </div>
+
+        <!-- Registration Modal (Hidden by default) -->
+        <div id="register-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Register for Event</h2>
+                <form id="register-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="event-name">Event:</label>
+                    <input type="text" id="event-name" name="event-name" readonly>
+
+                    <button type="submit">Submit Registration</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function registerEvent(eventName) {
+            document.getElementById('event-name').value = eventName;
+            document.getElementById('register-modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('register-modal').style.display = 'none';
+        }
+
+        // Close the modal if the user clicks anywhere outside of it
+        window.onclick = function(event) {
+            if (event.target === document.getElementById('register-modal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

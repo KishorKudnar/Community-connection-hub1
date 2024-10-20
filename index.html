@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Connection Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>Community Hub</h1>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#user-profiles">Create Profile</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#reward">Rewards</a></li>
+                    <li><a href="#quick-access">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Announcements & Alerts Section -->
+            <section id="alerts">
+                <h2>★ Announcements & Alerts</h2>
+                <div class="alert">
+                    <h3>Weather Alert</h3>
+                    <p>Heavy rains expected in the area this weekend. Stay updated on emergency services and shelter
+                        availability.</p>
+                </div>
+                <div class="alert">
+                    <h3>City News</h3>
+                    <p>Citywide cleanup initiative starts next month! Join your community in keeping our city clean.</p>
+                </div>
+                <div class="alert">
+                    <h3>Emergency Services</h3>
+                    <p>Power outage reported in the eastern district. Repairs are in progress and are expected to be
+                        completed by 5 PM today.</p>
+                </div>
+            </section>
+
+
+            <!-- User Profiles Section -->
+            <section id="user-profiles">
+                <h2>★ User Profiles</h2>
+                <div class="personal-dashboard">
+                    <h3>Personal Dashboard</h3>
+                    <p>View your contributions, settings, and notifications all in one place.</p>
+                </div>
+                <div class="profile-customization">
+                    <h3>Profile Customization</h3>
+                    <p>Edit your display name, bio, and privacy settings.</p>
+                    <form id="profile-form">
+                        <label for="display-name">Display Name:</label>
+                        <input type="text" id="display-name" name="display-name">
+                        <label for="bio">Bio:</label>
+                        <textarea id="bio" name="bio"></textarea>
+                        <label for="privacy-settings">Privacy Settings:</label>
+                        <select id="privacy-settings">
+                            <option value="public">Public</option>
+                            <option value="private">Private</option>
+                        </select>
+                        <button type="submit">Save Changes</button>
+                    </form>
+                </div>
+            </section>
+
+
+
+            <!-- Upcoming Events Section -->
+            <section id="events">
+                <h2>★ Upcoming Events</h2>
+                <div class="event-grid">
+                    <!-- Event 1 -->
+                    <div class="event-card">
+                        <h3>Community Fair</h3>
+                        <p>Date: October 25, 2024</p>
+                        <p>Join us for food, games, and community activities!</p>
+                        <button onclick="registerEvent('Community Fair')"><a href="reg.html">Register</a></button>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="event-card">
+                        <h3>Job Training Workshop</h3>
+                        <p>Date: November 5, 2024</p>
+                        <p>Learn essential skills to prepare for your next job opportunity.</p>
+                        <button onclick="registerEvent('Job Training Workshop')"><a
+                                href="reg.html">Register</a></button>
+                    </div>
+
+                    <!-- Event 3 -->
+                    <div class="event-card">
+                        <h3>Volunteer Drive</h3>
+                        <p>Date: November 10, 2024</p>
+                        <p>Join us in supporting local charities by volunteering your time.</p>
+                        <button onclick="registerEvent('Volunteer Drive')"><a href="reg.html">Register</a></button>
+                    </div>
+
+                    <!-- Event 4 -->
+                    <div class="event-card">
+                        <h3>Holiday Parade</h3>
+                        <p>Date: December 15, 2024</p>
+                        <p>Celebrate the holiday season with a grand parade featuring local talent and floats.</p>
+                        <button onclick="registerEvent('Holiday Parade')"><a href="reg.html">Register</a></button>
+                    </div>
+
+                    <!-- Event 5 -->
+                    <div class="event-card">
+                        <h3>Technology Expo</h3>
+                        <p>Date: January 20, 2025</p>
+                        <p>Explore the latest technology trends and innovations from startups and tech companies.</p>
+                        <button onclick="registerEvent('Technology Expo')"><a href="reg.html">Register</a></button>
+                    </div>
+
+                    <!-- Event 6 -->
+                    <div class="event-card">
+                        <h3>Community Cleanup</h3>
+                        <p>Date: February 10, 2025</p>
+                        <p>Join your neighbors in a city-wide cleanup initiative.</p>
+                        <button onclick="registerEvent('Community Cleanup')"><a href="reg.html">Register</a></button>
+                    </div>
+
+                    <!-- Event 7 -->
+                    <div class="event-card">
+                        <h3>Art and Music Festival</h3>
+                        <p>Date: March 15, 2025</p>
+                        <p>Enjoy local artists and musicians at the annual Art and Music Festival.</p>
+                        <button onclick="registerEvent('Art and Music Festival')"><a
+                                href="reg.html">Register</a></button>
+                    </div>
+
+                    <!-- Event 8 -->
+                    <div class="event-card">
+                        <h3>Health and Wellness Expo</h3>
+                        <p>Date: April 5, 2025</p>
+                        <p>Learn about the latest trends in health, wellness, and fitness.</p>
+                        <button onclick="registerEvent('Health and Wellness Expo')"><a
+                                href="reg.html">Register</a></button>
+                    </div>
+
+                    <!-- Event 9 -->
+                    <div class="event-card">
+                        <h3>Science and Technology Fair</h3>
+                        <p>Date: May 20, 2025</p>
+                        <p>Showcase your science projects or learn from others at this fair.</p>
+                        <button onclick="registerEvent('Science and Technology Fair')"><a
+                                href="reg.html">Register</a></button>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- reward -->
+            <section id="reward">
+                <h2>★ Reward and Badges</h2>
+                <a href="reward.html">Go to Rewards</a>
+            </section>
+
+
+            <!-- Popular Discussions Section -->
+            <section id="discussions">
+                <h2>★ Popular Discussions</h2>
+                <div class="discussion-list">
+                    <div class="discussion-item">
+                        <h3>Local Schools Reopening</h3>
+                        <p>Join the conversation about school safety measures as the new academic year begins.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <div class="discussion-item">
+                        <h3>Affordable Housing Solutions</h3>
+                        <p>Discuss the latest plans for affordable housing in the community.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <div class="discussion-item">
+                        <h3>Neighborhood Safety Concerns</h3>
+                        <p>Talk with your neighbors about local crime prevention and neighborhood watch programs.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Quick Access to Resources Section -->
+            <section id="quick-access">
+                <h2>★ Quick Access to Resources</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h3>Find Local Services</h3>
+                        <p>Search for health, housing, food, and job services near you.</p>
+                        <a href="#">Explore Now</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Volunteer Opportunities</h3>
+                        <p>Find ways to give back and volunteer in your community.</p>
+                        <a href="#">Get Involved</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Community Programs</h3>
+                        <p>Discover programs that support individuals and families in need.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="container">
+            <!-- Discussion Forums Section -->
+            <section id="forums">
+                <h2>★ Discussion Forums</h2>
+                <div class="forum-categories">
+                    <h3>Forum Categories</h3>
+                    <ul>
+                        <li><a href="#">Local Issues</a></li>
+                        <li><a href="#">Activities</a></li>
+                        <li><a href="#">Support Groups</a></li>
+                    </ul>
+                </div>
+                <div class="post-reply">
+                    <h3>Post and Reply Functions</h3>
+                    <p>Join the conversation! Post your thoughts, reply to others, and engage with the community.</p>
+                </div>
+            </section>
+
+            <!-- Resource Directory Section -->
+            <section id="resource-directory">
+                <h2>★ Resource Directory</h2>
+                <div class="search-filter">
+                    <h3>Search and Filter</h3>
+                    <p>Find services easily. Use the search bar and filter by category:</p>
+                    <input type="text" id="resource-search" placeholder="Search resources...">
+                    <select id="resource-category">
+                        <option value="health">Health Services</option>
+                        <option value="education">Education</option>
+                        <option value="business">Businesses</option>
+                    </select>
+                    <button id="search-btn">Search</button>
+                </div>
+                <div class="business-profiles">
+                    <h3>★ Business Profiles</h3>
+                    <p>Each listing includes contact info, a description, and user ratings or reviews.</p>
+                    <div class="business-card">
+                        <h4>Community Health Clinic</h4>
+                        <p>Contact: 123-456-7890</p>
+                        <p>Description: Providing affordable health services for all.</p>
+                        <p>User Rating: ★★★★☆</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2>★ Contact Us</h2>
+                <p>If you have any questions or would like to get in touch, feel free to reach out to us:</p>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a
+                            href="mailto:kishorkudnar2004@gmail.com">communityhub2024@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+918261987190">+91 8261 987 190</a></p>
+                </div>
+                <form id="contact-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+
+    <!-- Chatbot Section -->
+    <div id="chatbot">
+        <div id="chat-icon" onclick="toggleChat()">
+            <img src="chat.png" alt="Chat Icon" />
+        </div>
+        <div id="chat-window" style="display: none;">
+            <div id="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message..." />
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer>
+        <p>&&copy; 2024 Community Connection Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="event-details.js"></script>
+    <script src="reward.js"></script>
+
+
+</body>
+
+</html>

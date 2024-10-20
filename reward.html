@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Gamification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gamified Civic Engagement</h1>
+    </header>
+
+    <main>
+        <section id="user-profile">
+            <h2>User Profile</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Level:</strong> <span id="user-level">1</span></p>
+            <p><strong>Points:</strong> <span id="user-points">0</span></p>
+        </section>
+
+        <section id="activity">
+            <h2>Participate in Activities</h2>
+            <div class="activity-list">
+                <button onclick="participate('Volunteer Event', 50)">Join Volunteer Event (+50 Points)</button>
+                <button onclick="participate('Workshop', 30)">Attend Workshop (+30 Points)</button>
+                <button onclick="participate('Discussion', 20)">Join Discussion (+20 Points)</button>
+            </div>
+        </section>
+
+        <section id="badges">
+            <h2>Earned Badges</h2>
+            <div id="badge-container">
+                <p>No badges earned yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="reward.js"></script>
+</body>
+</html>

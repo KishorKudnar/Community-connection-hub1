@@ -1,0 +1,416 @@
+/* Reset browser default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50;
+    padding: 15px 0;
+}
+
+header h1 {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Navbar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-list a:hover {
+    color: #ffdd57;
+}
+
+.menu-toggle {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Hide navigation items initially */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Position the menu */
+        top: 60px; /* Place below the header */
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: #4CAF50; /* Same background color */
+        transition: all 0.3s ease; /* Smooth transition */
+    }
+
+    .nav-list.active {
+        display: flex; /* Show when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the toggle button */
+    }
+}
+
+/* Announcements Section */
+#alerts .alert {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #4CAF50;
+}
+
+#alerts .alert h3 {
+    font-weight: 500;
+    color: #4CAF50;
+}
+
+/* Events Section */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10%;
+}
+
+.event-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: #fff;
+        margin: 20px;
+    }
+}
+
+.event-card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.event-card button:hover {
+    background-color: #45a049;
+}
+
+/* Discussions Section */
+.discussion-list {
+    display: grid;
+    gap: 15px;
+}
+
+.discussion-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-left: 5px solid #4CAF50;
+}
+
+.discussion-item h3 {
+    font-weight: 500;
+    color: #4CAF50;
+}
+
+.discussion-item a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Quick Access Section */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.resource-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    background-color: #4CAF50;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.resource-card a:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Chatbot Styles */
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#chat-icon {
+    background-color: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#chat-icon img {
+    width: 40px; /* Adjust the icon size */
+    height: 40px;
+}
+
+#chat-window {
+    display: flex;
+    flex-direction: column;
+    height: 400px; /* Height of the chat window */
+    width: 300px; /* Width of the chat window */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* Space between chat window and icon */
+}
+
+#chat-messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+}
+
+#user-input {
+    border: 1px solid #ddd;
+    padding: 10px;
+    flex: 1;
+    border-radius: 5px;
+}
+
+#send-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+#send-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+/* Forums Section */
+#forums {
+    margin-top: 40px;
+}
+
+#forums .forum-categories ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#forums .forum-categories ul li {
+    margin-bottom: 10px;
+}
+
+#forums .forum-categories ul li a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Resource Directory Section */
+#resource-directory {
+    margin-top: 40px;
+}
+
+#resource-directory .search-filter {
+    margin-bottom: 20px;
+}
+
+#resource-directory #resource-search,
+#resource-directory #resource-category {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#resource-directory #search-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#resource-directory .business-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+/* User Profiles Section */
+#user-profiles {
+    margin-top: 40px;
+}
+
+#user-profiles #profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#user-profiles #profile-form input,
+#user-profiles #profile-form textarea,
+#user-profiles #profile-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#user-profiles #profile-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/*Contact information*/
+#contact {
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #45a049;
+}
+
+#reward{
+    margin-top: 150px;
+    /* margin-left: 40px; */
+    margin-right: 40px;
+    margin-bottom: 40px;
+    a {
+        text-decoration: none;
+        color: #ff00bb; /* Changes the link color */
+        border: 2px solid rgb(0, 225, 255);
+        border-radius: 7px;
+        margin: 15px;
+        padding: 5px;
+    }
+}
